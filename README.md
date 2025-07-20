@@ -4,7 +4,7 @@
 - [Event Information](#event-information)  
 - [Update Information (Important if attended last event)](#important-info)  
 - [Files Included in Repo](#files-included-in-repo)  
-- [Setup of IDE, and Installations](#setup-for-ide)  
+- [Setup of IDE, and Installations](#setup)  
 - [ESP Pinout and Important Features](#esp-pinout-and-important-features)  
 - [Resources to Get Your Own Kit](#resources)  
 - [Key Takeaways](#key-takeaway)  
@@ -34,7 +34,9 @@ In addition, there is also a workshop segment to build your own motion sensor, s
 
   Please:
   - Avoid sending any private data through this broker.
-  - Use a very unique topic to avoid interference with other users.  
+  - Use a very unique topic to avoid interference with other users.
+
+- If you plan to used 3D pinting for this project, or any other personal projects. Centennial College's library offers free 3d printing for each students up to 100 grams. For this project, the case is 22.93 grams.
 
 ---
 
@@ -48,7 +50,7 @@ This repository contains:
 
 ---
 
-## <h2>**_Setup for IDE_**</h2>
+## <h2>**_Setup_**</h2>
 
 1. Install the drivers for your computer to recognize ESP devices:  
    [Silicon Labs VCP Drivers](https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers)  
@@ -63,6 +65,9 @@ This repository contains:
 
 3. Install **Thonny IDE**:  
    [Thonny](https://thonny.org/)
+
+
+If you want a video version of this steps cheack out [TechToTiknker on how to get started in micropython](https://www.youtube.com/watch?v=elBtWZ_fOZU&list=PLw0SimokefZ3uWQoRsyf-gKNSs4Td-0k6)
 
 ---
 
@@ -115,7 +120,7 @@ For questions, feel free to join our [Discord](https://discord.gg/vV8pJHYWdX).
 - [Porsche Taillights](https://www.youtube.com/watch?v=VImyvvERbCI) (Says aurdiono but esp)
 - [Dasai Mochi](https://www.youtube.com/watch?v=jEvsJSZWH9U)
 - [Plant watering system](https://www.youtube.com/watch?v=Ix3a3ThsHfA)
-- [Haptic knob](https://www.youtube.com/watch?v=Q76dMggUH1M) (Its way more advance and its own pcb, but the brain is esp32. Had to include since its an amazing project)
+- [Haptic knob](https://www.youtube.com/watch?v=Q76dMggUH1M) (Its way more advance and its own pcb, but the brain is an esp32. Had to include since its an amazing project with a lot of details)
 
 ---
 
