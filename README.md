@@ -36,7 +36,7 @@ In addition, there is also a workshop segment to build your own motion sensor, s
   - Avoid sending any private data through this broker.
   - Use a very unique topic to avoid interference with other users.
 
-- If you plan to used 3D pinting for this project, or any other personal projects. Centennial College's library offers free 3d printing for each students up to 100 grams. For this project, the case is 22.93 grams.
+- If you plan to use 3D pinting for this project, or any other personal projects. Centennial College library offers free 3d printing for each students up to 100 grams. For this project, the case is 21.59 grams.
 
 ---
 
