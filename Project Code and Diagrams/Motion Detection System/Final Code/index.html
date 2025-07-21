@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MQTT Motion Detector</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      transition: background-color 0.5s;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: black;
+      transition: color 0.5s;
+    }
+
+    .alert {
+      background-color: red;
+    }
+
+    .alert h1 {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="statusText">Waiting for motion...</h1>
+
+  <script>
+    //9001 is PORT, make sure to change depending on broker, if there is noone just remove it
+    const client = new Paho.MQTT.Client("99.227.97.120", 9001, "clientID_" + parseInt(Math.random() * 10000));
+    const topic = "test/topic"; // Replace with your topic
+
+    client.connect({
+      onSuccess: () => {
+        console.log("Connected to MQTT broker");
+        client.subscribe(topic);
+      }
+    });
+
+    client.onMessageArrived = (message) => {
+      console.log("Message received:", message.payloadString);
+      if (message.payloadString.toLowerCase() === "motion") {
+        document.body.classList.add("alert");
+        document.getElementById("statusText").innerText = "🚨 Motion Detected!";
+        
+        // Reset after 10 seconds
+        setTimeout(() => {
+          document.body.classList.remove("alert");
+          document.getElementById("statusText").innerText = "Waiting for motion...";
+        }, 10000);
+      }
+    };
+  </script>
+</body>
+</html>
